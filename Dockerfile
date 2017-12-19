@@ -1,3 +1,5 @@
+# NodeJS Jenkins JNPL slave 
+
 FROM jenkinsci/jnlp-slave
 
 USER root
