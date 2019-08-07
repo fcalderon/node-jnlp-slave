@@ -1,4 +1,4 @@
-# NodeJS Jenkins JNPL slave 
+# NodeJS Jenkins JNPL slave
 
 FROM jenkinsci/jnlp-slave
 
@@ -13,8 +13,10 @@ RUN apt-get update \
 # nvm environment variables
 ENV NVM_DIR /usr/local/nvm
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
 RUN apt-get install nodejs
+
+npm install -g @angular/cli
 
 USER jenkins
