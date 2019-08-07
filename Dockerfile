@@ -17,6 +17,6 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
 RUN apt-get install nodejs
 
-npm install -g @angular/cli
+RUN npm install -g @angular/cli
 
 USER jenkins
