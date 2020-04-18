@@ -13,12 +13,12 @@ RUN apt-get update \
 # nvm environment variables
 ENV NVM_DIR /usr/local/nvm
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
 
 RUN apt-get install nodejs
 
-RUN npm install -g @angular/cli@^8.2.0
-RUN npm install -g typescript@3.5.3
+RUN npm install -g @angular/cli@^9.1.1
+RUN npm install -g typescript@~3.8.3
 
 
 RUN chown -R jenkins:jenkins /home/jenkins/.npm
