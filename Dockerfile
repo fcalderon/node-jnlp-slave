@@ -1,6 +1,6 @@
 # NodeJS Jenkins JNPL slave
 
-FROM jenkinsci/jnlp-slave
+FROM jenkinsci/jnlp-slave:4.3-1
 
 USER root
 
@@ -15,13 +15,12 @@ ENV NVM_DIR /usr/local/nvm
 
 RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
 
-RUN apt-get install nodejs
+RUN apt-get install -y nodejs
 
 RUN npm install -g @angular/cli@^9.1.1
 RUN npm install -g typescript@~3.8.3
 
 
-RUN chown -R jenkins:jenkins /home/jenkins/.npm
-RUN chown -R jenkins:jenkins /home/jenkins/.config
+RUN chown -R jenkins:jenkins /home/jenkins
 
 USER jenkins
